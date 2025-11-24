@@ -23,7 +23,7 @@ Phineas takes complex financial questions and turns them into clear, step-by-ste
 
 - Python 3.10 or higher
 - [uv](https://github.com/astral-sh/uv) package manager
-- Anthropic API key (get [here](https://console.anthropic.com/api-keys))
+- Anthropic API key (get [here](https://platform.openai.com/api-keys))
 - Financial Datasets API key (get [here](https://financialdatasets.ai))
 
 ### Installation
@@ -45,7 +45,7 @@ uv sync
 cp env.example .env
 
 # Edit .env and add your API keys
-# ANTHROPIC_API_KEY=your-anthropic-api-key
+# OPENAI_API_KEY=your-openai-api-key
 # FINANCIAL_DATASETS_API_KEY=your-financial-datasets-api-key
 ```
 

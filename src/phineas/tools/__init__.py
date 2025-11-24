@@ -1,4 +1,4 @@
-# This file makes the directory a Python package from typing_extensions import Callable
+# This file makes the directory a Python package
 from typing_extensions import Callable
 from phineas.tools.finance.filings import get_filings
 from phineas.tools.finance.filings import get_10K_filing_items
@@ -16,8 +16,20 @@ from phineas.tools.finance.news import get_news
 from phineas.tools.finance.estimates import get_analyst_estimates
 from phineas.tools.finance.segments import get_segmented_revenues
 from phineas.tools.search.google import search_google_news
+from phineas.tools.crypto.prices import get_crypto_price
+from phineas.tools.crypto.prices import get_multiple_crypto_prices
+from phineas.tools.crypto.prices import get_crypto_market_data
+from phineas.tools.crypto.prices import get_top_cryptos
+from phineas.tools.crypto.ohlc import get_crypto_ohlc
+from phineas.tools.crypto.ohlc import get_crypto_market_chart
+from phineas.tools.crypto.ohlc import get_crypto_market_chart_range
+from phineas.tools.crypto.ohlc import get_crypto_historical_data
+from phineas.tools.crypto.volatility import analyze_crypto_volatility
+from phineas.tools.crypto.volatility import analyze_price_action
+from phineas.tools.crypto.volatility import compare_crypto_performance
 
 TOOLS: list[Callable[..., any]] = [
+    # Stock market tools
     get_income_statements,
     get_balance_sheets,
     get_cash_flow_statements,
@@ -34,4 +46,16 @@ TOOLS: list[Callable[..., any]] = [
     get_analyst_estimates,
     get_segmented_revenues,
     search_google_news,
+    # Crypto market tools
+    get_crypto_price,
+    get_multiple_crypto_prices,
+    get_crypto_market_data,
+    get_top_cryptos,
+    get_crypto_ohlc,
+    get_crypto_market_chart,
+    get_crypto_market_chart_range,
+    get_crypto_historical_data,
+    analyze_crypto_volatility,
+    analyze_price_action,
+    compare_crypto_performance,
 ]
