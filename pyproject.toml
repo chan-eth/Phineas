@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "phineas"
+version = "0.2.3"
+description = "AI agent for financial analysis."
+authors = []
+requires-python = ">=3.10"
+dependencies = [
+    "anthropic>=0.40.0",
+    "googlenewsdecoder>=0.1.7",
+    "langchain>=0.3.27",
+    "langchain-anthropic>=0.3.0",
+    "langsmith>=0.3.37",
+    "prompt-toolkit>=3.0.0",
+    "pydantic>=2.11.10",
+    "python-dotenv>=1.1.1",
+    "requests>=2.32.5",
+]
+
+[project.scripts]
+phineas-agent = "phineas.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
